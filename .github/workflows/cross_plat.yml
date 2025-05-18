@@ -62,8 +62,8 @@ jobs:
         run: |
           echo "Deploying package: $outputPath"
           dotnet ./uipcli/tools/uipcli.dll package deploy "$outputPath" \
-          "https://cloud.uipath.com/" \
-          DefaultTenant \
+          "https://cloud.uipath.com" \
+          "DefaultTenant" \
           -A "walmazwnmqbk" \
           -I "$applicationId" \
           -S "$applicationSecret" \
