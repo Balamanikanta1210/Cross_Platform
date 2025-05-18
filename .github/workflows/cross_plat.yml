@@ -61,11 +61,14 @@ jobs:
       - name: Run uipcli deploy
         run: |
           echo "Deploying package: $outputPath"
+          applicationId="${{ secrets.UIPATH_APPLICATION_ID }}"
+          applicationSecret="${{ secrets.UIPATH_APPLICATION_SECRET }}"
           dotnet ./uipcli/tools/uipcli.dll package deploy "$outputPath" \
           "https://cloud.uipath.com" \
           "DefaultTenant" \
-          -A "walmazwnmqbk" \
-          -I "$applicationId" \
-          -S "$applicationSecret" \
+          --accountForApp "walmazwnmqbk" \
+          --applicationId "$applicationId" \
+          --applicationSecret  "$applicationSecret" \
           --applicationScope "OR.Assets OR.BackgroundTasks OR.Execution OR.Folders OR.Jobs OR.Machines.Read OR.Monitoring OR.Robots.Read OR.Settings.Read OR.TestSetExecutions OR.TestSets OR.TestSetSchedules OR.Users.Read" \
-          -o "Test"
+          --organizationUnit  "Test" \
+          --traceLevel Verbose
