@@ -39,3 +39,22 @@ jobs:
           else
             echo "❌ uipcli.exe not found at ./uipcli/tools/uipcli.exe"
           fi
+      - name: Run uipcli pack
+        run: |
+         projectPath="$GITHUB_WORKSPACE/project.json"
+         outputPath="$GITHUB_WORKSPACE/Output"
+
+         echo "Project path: $projectPath"
+         echo "Output path: $outputPath"
+
+         applicationId="${{ secrets.UIPATH_APPLICATION_ID }}"
+         applicationSecret="${{ secrets.UIPATH_APPLICATION_SECRET }}"
+
+         dotnet ./uipcli/tools/uipcli.dll package pack "$projectPath" \
+         -o "$outputPath" \
+         --libraryOrchestratorUrl "https://cloud.uipath.com/" \
+         --libraryOrchestratorTenant "DefaultTenant" \
+         --libraryOrchestratorApplicationId "$applicationId" \
+         --libraryOrchestratorApplicationSecret "$applicationSecret" \
+         --libraryOrchestratorApplicationScope "OR.Assets OR.BackgroundTasks OR.Execution OR.Folders OR.Jobs OR.Machines.Read OR.Monitoring OR.Robots.Read OR.Settings.Read OR.TestSetExecutions OR.TestSets OR.TestSetSchedules OR.Users.Read" \
+         --libraryOrchestratorAccountForApp "walmazwnmqbk"
