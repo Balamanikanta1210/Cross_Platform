@@ -26,11 +26,12 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Download UiPath CLI (specific version from Azure DevOps)
+      - name: Download UiPath CLI from GitHub Release
         run: |
-          curl -L -o uipcli.zip "https://uipath.pkgs.visualstudio.com/Public.Feeds/_apis/packaging/feeds/1c781268-d43d-45ab-9dfc-0151a1c740b7/nuget/packages/UiPath.CLI/versions/25.4.9239.19674"
-          unzip -o uipcli.zip -d uipcli
-          chmod +x ./uipcli/tools/uipcli.dll
+         curl -L -o UiPath.CLI.25.4.9239.19674.zip "https://github.com/Balamanikanta1210/Cross_Platform/releases/tag/1.0.0/UiPath.CLI.25.4.9239.19674.zip"
+         unzip -o UiPath.CLI.25.4.9239.19674.zip -d uipcli
+         chmod +x ./uipcli/tools/uipcli.dll
+
 
       - name: Verify uipcli.exe exists
         run: |
