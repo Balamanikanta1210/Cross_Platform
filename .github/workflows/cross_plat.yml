@@ -58,8 +58,7 @@ jobs:
          --libraryOrchestratorApplicationSecret "$applicationSecret" \
          --libraryOrchestratorApplicationScope "OR.Assets OR.BackgroundTasks OR.Execution OR.Folders OR.Jobs OR.Machines.Read OR.Monitoring OR.Robots.Read OR.Settings.Read OR.TestSetExecutions OR.TestSets OR.TestSetSchedules OR.Users.Read" \
          --libraryOrchestratorAccountForApp "walmazwnmqbk"
-      - name: Run uipcli deploy
-        run: |
+
           echo "Deploying package: $outputPath"
           ls -l "$outputPath"
           applicationId="${{ secrets.UIPATH_APPLICATION_ID }}"
