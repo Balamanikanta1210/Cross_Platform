@@ -63,4 +63,4 @@ jobs:
           echo "$applicationId"
           echo "$applicationSecret"
           ls -l "$outputPath"
-          dotnet ./uipcli/tools/uipcli.dll package deploy "$outputPath" "https://cloud.uipath.com" "DefaultTenant" --accountForApp "walmazwnmqbk" --applicationId "$applicationId" --applicationSecret "$applicationSecret" --applicationScope "OR.Assets OR.BackgroundTasks OR.Execution OR.Folders OR.Jobs OR.Machines.Read OR.Monitoring OR.Robots.Read OR.Settings.Read OR.TestSetExecutions OR.TestSets OR.TestSetSchedules OR.Users.Read" --organizationUnit "Test" --traceLevel Verbose
+          dotnet ./uipcli/tools/uipcli.dll package deploy "$outputPath" "https://cloud.uipath.com" "DefaultTenant" --accountForApp "walmazwnmqbk" --applicationId "3df5ccca-e755-4211-b4fb-3b256a91daa9" --applicationSecret "O^$f?*XgoRC4%Hp?" --applicationScope "OR.Assets OR.BackgroundTasks OR.Execution OR.Folders OR.Jobs OR.Machines OR.Monitoring OR.Robots OR.Settings OR.TestSetExecutions OR.TestSets OR.TestSetSchedules OR.Users" --organizationUnit "Test" --traceLevel Verbose
