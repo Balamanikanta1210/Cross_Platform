@@ -61,7 +61,7 @@ jobs:
       - name: Run uipcli deploy
         run: |
           echo "Deploying package: $outputPath"
-          ls -l "$packagePath"
+          ls -l "$outputPath"
           applicationId="${{ secrets.UIPATH_APPLICATION_ID }}"
           applicationSecret="${{ secrets.UIPATH_APPLICATION_SECRET }}"
           
