@@ -28,10 +28,9 @@ jobs:
 
       - name: Download UiPath CLI from GitHub Release
         run: |
-         curl -L -o UiPath.CLI.25.4.9239.19674.zip "https://github.com/Balamanikanta1210/Cross_Platform/releases/tag/1.0.0/UiPath.CLI.25.4.9239.19674.zip"
-         unzip -o UiPath.CLI.25.4.9239.19674.zip -d uipcli
+         curl -L -o uipcli.zip "https://github.com/Balamanikanta1210/Cross_Platform/releases/download/1.0.0/UiPath.CLI.25.4.9239.19674.zip"
+         unzip -o uipcli.zip -d uipcli
          chmod +x ./uipcli/tools/uipcli.dll
-
 
       - name: Verify uipcli.exe exists
         run: |
