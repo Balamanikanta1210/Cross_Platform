@@ -61,8 +61,10 @@ jobs:
       - name: Run uipcli deploy
         run: |
           echo "Deploying package: $outputPath"
+          ls -l "$packagePath"
           applicationId="${{ secrets.UIPATH_APPLICATION_ID }}"
           applicationSecret="${{ secrets.UIPATH_APPLICATION_SECRET }}"
+          
           dotnet ./uipcli/tools/uipcli.dll package deploy "$outputPath" \
           "https://cloud.uipath.com" \
           "DefaultTenant" \
