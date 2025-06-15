@@ -18,7 +18,7 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
+          echo Add other actions to build1,
           echo test, and deploy your project.
 
       - name: Setup .NET SDK
