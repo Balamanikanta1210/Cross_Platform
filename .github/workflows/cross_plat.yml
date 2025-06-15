@@ -63,4 +63,4 @@ jobs:
           echo "$applicationId"
           echo "$applicationSecret"
           ls -l "$outputPath"
-          dotnet ./uipcli/tools/uipcli.dll package deploy $outputPath "https://infra-orch-03.westeurope.cloudapp.azure.com/" "default" --applicationId "f0400553-27eb-43e3-917f-c814516961cc" --applicationSecret "klQ0nM0?ITZ8A2Hl" --applicationScope "OR.Settings OR.Robots OR.Machines OR.Execution OR.Assets OR.Jobs OR.Users OR.Monitoring OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules" --organizationUnit "Shared" --traceLevel Verbose
+          dotnet ./uipcli/tools/uipcli.dll package deploy $outputPath "https://murali-22-10.southindia.cloudapp.azure.com/" "default" --applicationId "57fc1aa6-9492-44a0-874f-ed9f7d92ec98" --applicationSecret "ZDbHpSX4JmBt!u2O" --applicationScope "OR.Assets OR.BackgroundTasks OR.Execution OR.Folders OR.Jobs OR.Machines OR.Monitoring OR.Robots OR.Settings OR.TestSetExecutions OR.TestSets OR.TestSetSchedules OR.Users" --organizationUnit "Shared" --traceLevel Verbose
