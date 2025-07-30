@@ -8,7 +8,7 @@ pool:
 
 variables:
   DOCKER_TAG: 'latest'  # <-- Replace with actual tag if needed
-  DOCKER_IMAGE: 'uipathprod.azurecr.io/robot/uiautomation-runtime:$(DOCKER_TAG)'
+  DOCKER_IMAGE: 'uipathprod.azurecr.io/robot/uiautomation-runtime:<tag>'
   LICENSE_AGREEMENT: 'accept'
   ORCHESTRATOR_URL: 'https://cloud.uipath.com/walmazwnmqbk/DefaultTenant/orchestrator_'
   MACHINE_KEY: '2f331945-11ab-4c20-8d73-cf366516f9d4'
