@@ -17,9 +17,7 @@ stages:
     jobs:
       - job: RunOnLinux
         steps:
-          - task: DockerInstaller@0
-            inputs:
-              dockerVersion: 'latest'
+      
 
           - script: |
               echo "Pulling Docker image: $(DOCKER_IMAGE)"
