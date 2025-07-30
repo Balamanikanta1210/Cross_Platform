@@ -30,6 +30,11 @@ stages:
                          -e MACHINE_KEY=$(MACHINE_KEY) \
                          -tid $(DOCKER_IMAGE)
             displayName: 'Docker Run UiPath Robot'
+
+          - task: UiPathInstallPlatform@5
+            inputs:
+              cliVersion: 'X_24.12.9166.24491'
+
           - task: UiPathTest@5
             inputs:
               testTarget: 'TestSet'
