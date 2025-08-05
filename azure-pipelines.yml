@@ -39,5 +39,5 @@ stages:
             inputs:
               testTarget: 'TestSet'
               orchestratorConnection: 'UiPath'
-              testSet: 'LinuxTestset'
+              testSet: 'LinuxTestNew'
               folderName: 'Test'
